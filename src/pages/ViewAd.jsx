@@ -12,6 +12,7 @@ export default function ViewAd({ user }) {
   const [ad, setAd] = useState(null);
   const [comments, setComments] = useState([]);
   const [comment, setComment] = useState('');
+  const [alert, setAlert] = useState(null);
   const history = useHistory();
 
   useEffect(() => {
@@ -20,7 +21,9 @@ export default function ViewAd({ user }) {
         const result = await axios.get(`${BASE_API_URL}/advertisements/${_id}`, { withCredentials: true });
         setAd(result.data);
       } catch(err) {
-        //
+        if(err.request) {
+          setAlert('Please Disable your AdBlocker and refresh the page, it blocked the API request');
+        }
       }
     }
     const getComments = async (_id) => {
@@ -28,7 +31,9 @@ export default function ViewAd({ user }) {
         const result = await axios.get(`${BASE_API_URL}/advertisements/${_id}/comments`, { withCredentials: true });
         setComments(result.data);
       } catch(err) {
-        //
+        if(err.request) {
+          setAlert('Please Disable your AdBlocker, it blocked the API request');
+        }
       }
     }
     if(id) {
@@ -47,6 +52,16 @@ export default function ViewAd({ user }) {
       setComments((comments) => [...comments, {...result.data, user_name: user.name}]);
       setComment('');
     }
+  }
+
+  if(alert) {
+    return (
+      <div class="alert-banner my-4">
+        <div class="alert alert-danger" role="alert">
+          {alert}
+        </div>
+      </div>
+    );
   }
 
   if(ad) {
