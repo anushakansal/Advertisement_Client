@@ -1,0 +1,20 @@
+.ad-card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icons {
+  width: 60px;
+}
+
+.edit {
+  background: #e2e2e2;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
