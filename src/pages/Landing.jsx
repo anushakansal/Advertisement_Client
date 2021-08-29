@@ -21,7 +21,7 @@ export default function Landing({ user }) {
       </div>
       <div className="banner">
         <h1 className="mb-4 head">Welcome to Ads</h1>
-        <Link to="/login" className="btn btn-primary button1">Login</Link>
+        <Link to="/login" className="btn btn-primary button1">Register/Login</Link>
       </div> 
     </div>
   );
