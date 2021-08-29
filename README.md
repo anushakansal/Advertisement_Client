@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+Deployed App Link : https://ads-client.netlify.app/
+
+This project enables the user to create, publish, edit and delete the advertisements.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
