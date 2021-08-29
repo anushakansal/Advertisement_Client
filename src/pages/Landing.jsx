@@ -20,8 +20,8 @@ export default function Landing({ user }) {
         </div>
       </div>
       <div className="banner">
-        <h1 className="mb-4">Welcome to Ads</h1>
-        <Link to="/login" className="btn btn-primary">Login</Link>
+        <h1 className="mb-4 head">Welcome to Ads</h1>
+        <Link to="/login" className="btn btn-primary button1">Login</Link>
       </div> 
     </div>
   );

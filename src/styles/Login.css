@@ -6,3 +6,9 @@
   flex-direction: column;
   height: 70vh;
 }
+
+.button1{
+  padding: 10px 40px;
+  font-size: 30px;
+  background-color: black;
+}

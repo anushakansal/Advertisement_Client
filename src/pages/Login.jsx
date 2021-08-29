@@ -8,7 +8,7 @@ export default function Login() {
 
   return (
     <div className="container">
-      <button className="btn btn-primary" onClick={handleLogin}>Login with Google</button>     
+      <button className="btn btn-primary button1" onClick={handleLogin}>Login with Google</button>     
     </div>
   );
 }

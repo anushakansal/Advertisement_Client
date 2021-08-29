@@ -52,7 +52,7 @@ export default function AdDetailsForm({ ad, heading }) {
   return (
     <div className="container">
       <div className="create-ad">
-        <h1>{heading}</h1>
+      <h1 className="heading1">{heading}</h1>
         {error && 
           <div className="alert alert-danger" role="alert">
             {error}
